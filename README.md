@@ -6,3 +6,6 @@ Albert is an inventory manager designed to help organise our electrical componen
 - Express API for backend
 - MongoDB for Database
 - Svelte/Sapper for SSR Frontend
+
+# Contributors
+- [ ] 😅 [Henry Chen](https://github.com/jumper385)
