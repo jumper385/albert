@@ -19,7 +19,7 @@
             body: JSON.stringify({
                 bom: bom,
                 project: {
-                    name:'test',
+                    ...formdata
                 }
             }),
             headers: {

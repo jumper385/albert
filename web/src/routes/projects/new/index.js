@@ -9,7 +9,7 @@ export const post = async (req, res) => {
 
     let filtered = table.map(x => {
         let standardOutput = {
-            component:`${x.value}${x.unit == 'model' ? "" : x.unit}_${type2Code(x.type)}_${x.package}`.toLowerCase(),
+            component:`${x.value}${x.unit == 'model' ? "" : x.unit}_${type2Code(x.type)}_${x.package}`,
             quantity: x.quantity,
         }
         return standardOutput

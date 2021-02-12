@@ -22,6 +22,12 @@ router.get('/', async (req, res) => {
 
 })
 
+router.get('/projectid/:projectid', async (req,res) => {
+    let { projectid } = req.params; 
+    let project = await db.queryCollection(schemas.Project, {id:projectid});
+    res.json(project[0])
+})
+
 router.post('/', async (req, res) => {
     let { bom, project } = req.body;
     let newProject = await db.postCollection(schemas.Project, project);

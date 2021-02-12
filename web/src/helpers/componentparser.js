@@ -1,6 +1,6 @@
 export const type2Code = code => {
     let typeCode = null;
-    switch (code.toLowerCase()) {
+    switch (`${code}`.toLowerCase()) {
         case 'resistor':
             typeCode = 'res';
             break;

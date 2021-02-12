@@ -4,7 +4,7 @@ const db = require('../helpers/db');
 
 const router = express.Router();
 
-router.get('/',(req,res) => {
+router.get('/', async (req,res) => {
 
     res.json(
         await db.queryCollection(schemas.Component)
@@ -12,7 +12,7 @@ router.get('/',(req,res) => {
 
 })
 
-router.post('/', (req,res) => {
+router.post('/', async (req,res) => {
     let { component } = req.body;
     console.log(new schemas.Component(component));
     res.json(req.body);
