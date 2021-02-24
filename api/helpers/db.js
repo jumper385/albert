@@ -5,6 +5,7 @@ mongoose.connect(`mongodb://db:27017/test`, {
 	useUnifiedTopology: true
 }, (err) => {
 	if(err){
+		console.log("something went wrong...")
 		throw err;
 	} else {
 		console.log('successful db connection');

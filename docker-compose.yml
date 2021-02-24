@@ -14,11 +14,14 @@ services:
     restart: unless-stopped
     ports:
       - '81:3000'
-      - '5000:5000'
+    volumes:
+      - './api:/api'
 
   db:
     image: mongo
     restart: unless-stopped
+    ports:
+      - "5656:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: postdata
+      MONGO_INITDB_ROOT_PASSWORD: password
